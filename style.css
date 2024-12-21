@@ -2,10 +2,12 @@
 /* global css start form here */
 :root {
     --text-color: #17173a ; 
+    --blue-black:#17173a;
     --orange-color:#ffa92b;
     --primary-bg:#ffa92b;
     --secondary-bg:#9edae5;
     --gray-color:#505050;
+    --white-color:#fff;
     --fw-400:400;
     --fw-500:500;
     --fw-600:600;
@@ -144,7 +146,7 @@ section#choose_section{
     padding-top: 100px;
     overflow: hidden;
 }
-.retalab_section_subtitle::before {
+.choose_section_subtitle::before {
     position: absolute;
     content: "";
     top: 50%;
@@ -155,7 +157,7 @@ section#choose_section{
     margin-top: -1px;
 }
 
-.retalab_section_subtitle::after{
+.choose_section_subtitle::after{
     position: absolute;
     content: "";
     top: 50%;
@@ -165,7 +167,7 @@ section#choose_section{
     background-color: var(--primary-bg);
     margin-top: -1px;
 }
-.retalab_section_subtitle{
+.choose_section_subtitle{
     padding-left: 2.1875rem;
     padding-right: 2.1875rem;
     position: relative;
@@ -177,15 +179,22 @@ section#choose_section{
     color: var(--orange-color);
 }
 
-section.choose_section h2.retalab_section_title{
+section.choose_section h2.choose_section_title{
     font-weight: var(--fw-700);
     color: var(--text-color);
+    font-size: 3rem;
 }
-.choose_item{
+
+section.choose_section .row.choose_card_items{
+    --bs-gutter-x:3rem;
+    --bs-gutter-y: 3rem; /* Vertical gutter */
+    padding-top: 50px;
+}
+section.choose_section .choose_item{
     position: relative;
     z-index: 1;
 }
-.choose_card{
+section.choose_section .choose_card{
     padding: 1.875rem;
     box-shadow: 0 5px 45px rgba(23, 23, 58, 0.1);
     position: relative;
@@ -193,7 +202,7 @@ section.choose_section h2.retalab_section_title{
     -webkit-border-radius: 8px;
     background-color: #fff;
 }
-.choose_card::after{
+section.choose_section .choose_card::after{
     content: ""; /* Required for the pseudo-element to work */
     position: absolute;
     top: 0;
@@ -206,12 +215,12 @@ section.choose_section h2.retalab_section_title{
     background-color: var(--primary-bg); /* Use your custom CSS variable */
     transition: all 0.3s; /* Smooth transitions for properties like transform or color */
 }
-.choose_card:hover::after{
+section.choose_section .choose_card:hover::after{
     -webkit-transform: rotate(4deg); /* Safari (older versions) */
     -ms-transform: rotate(4deg);    /* Internet Explorer 9 */
     transform: rotate(4deg);        /* Modern browsers */
 }
-.choose_card_icon{
+section.choose_section .choose_card_icon{
     width: 75px;
     height: 75px;
     background-color: var(--transparet-orange);
@@ -221,17 +230,129 @@ section.choose_section h2.retalab_section_title{
     border-radius: 50%;
     -webkit-border-radius: 50%;
 }
-.choose_card_content{
+section.choose_section .choose_card_content{
     margin-top: 1.875rem;
 }
-.choose_card_content h3.choose_card_title{
+section.choose_section .choose_card_content h3.choose_card_title{
     font-size: 1.75rem;
     font-weight: var(--fw-600);
     color: var(--text-color);
 }
-.choose_card_content p.choose_card_description{
+section.choose_section .choose_card_content p.choose_card_description{
     font-size: 18px;
     line-height: 31px;
     font-weight: var(--fw-400);
 }
 /* choose section css end form here */
+
+/* review section  css start form here */
+section#review_section{
+    padding: 12.5rem 6.25rem;
+    clip-path: polygon(0 12%, 100% 0, 100% 88%, 0% 100%);
+    position: relative;
+    z-index: 1;
+    background-color: var(--blue-black);
+    overflow: hidden;
+}
+section.review_section div.shape_one{
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    width: 650px;
+    height: 250px;
+    clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+    background-color: #fad961;
+    background-image: radial-gradient(circle 597px at 93% 9.8%, #ff3d59 1.7%, #fcfb2c 97%);
+    opacity: 0.05;
+    animation: slideFlow 20s infinite linear;
+    z-index: -1;
+} 
+section.review_section div.shape_two{
+    position: absolute;
+    bottom: 50px;
+    left: 100px;
+    width: 650px;
+    height: 250px;
+    clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+    background-image: linear-gradient(76.3deg, #2c3e4e 12.6%, #456783 82.8%);
+    opacity: 0.1;
+    animation: slideFlow 15s infinite linear;
+    animation-delay: 1s;
+    z-index: -1;    
+}
+@-webkit-keyframes slideFlow {
+    0% {
+        left: -650px;
+    }
+
+    100% {
+        left: 110%;
+    }
+}
+@-moz-keyframes slideFlow {
+    0% {
+        left: -650px;
+    }
+
+    100% {
+        left: 110%;
+    }
+}
+
+@-ms-keyframes slideFlow {
+    0% {
+        left: -650px;
+    }
+
+    100% {
+        left: 110%;
+    }
+}
+
+@keyframes slideFlow {
+    0% {
+        left: -650px;
+    }
+
+    100% {
+        left: 110%;
+    }
+}
+section.review_section .review_title_div{
+    margin-bottom: 4.0625rem;
+}
+section.review_section .review_title{
+    position: relative;
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: var(--fw-700);
+    color: var(--white-color);
+    --bs-text-opacity: 1;
+}
+section.review_section .review_title::before{
+    position: absolute;
+    content: "";
+    left: -150px;
+    top: 50%;
+    width: 130px;
+    height: 2px;
+    margin-top: -1px;
+    background-color: var(--orange-color);
+    background-image: linear-gradient(19deg, var(--orange-color) 0%, #71e2f8 100%);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+section.review_section .review_title::after{
+    position: absolute;
+    content: "";
+    right: -150px;
+    top: 50%;
+    width: 130px;
+    height: 2px;
+    margin-top: -1px;
+    background-color: var(--orange-color);
+    background-image: linear-gradient(19deg, var(--orange-color) 0%, #71e2f8 100%);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+/* review section  css end form here */
