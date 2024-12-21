@@ -1,29 +1,41 @@
 
 /* global css start form here */
 :root {
-    --text-color: #17173a ; 
-    --blue-black:#17173a;
-    --orange-color:#ffa92b;
-    --primary-bg:#ffa92b;
-    --secondary-bg:#9edae5;
-    --gray-color:#505050;
-    --white-color:#fff;
-    --fw-400:400;
-    --fw-500:500;
-    --fw-600:600;
-    --fw-700:700;
-    --fy:"Poppins", sans-serif;
-    --transparet-orange:#ffa92b26;
+    --transparent-color: #0d6efd45; 
+    --text-color: #17173a;
+    --blue-black: #17173a;
+    --orange-color: #ffa92b;
+    --primary-bg: #ffa92b;
+    --secondary-bg: #9edae5;
+    --gray-color: #505050;
+    --white-color: #fff;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fy: "Poppins", sans-serif;
+   
 }
+
 h1, h2, h3, h4, h5, h6 {
-    font-family:var(--fy);
+    font-family: var(--fy);
     color: var(--text-color);
     margin: 0;
     line-height: 1.4;
     word-break: break-word;
 }
 
-
+.section_title {
+    font-size: 3rem;
+    color: var(--blue-black);
+    font-weight: var(--fw-700);
+}
+.section_header p,
+section.cta_section .row div.cta_card div.cta_card_content p.description
+{
+    font-size: 1.25rem;
+    color: var(--gray-color);
+}
 /* global css start form here */
 /* banner section css start form here */
 section#banner_section {
@@ -179,22 +191,22 @@ section#choose_section{
     color: var(--orange-color);
 }
 
-section.choose_section h2.choose_section_title{
+section#choose_section h2.choose_section_title{
     font-weight: var(--fw-700);
     color: var(--text-color);
     font-size: 3rem;
 }
 
-section.choose_section .row.choose_card_items{
+section#choose_section .row.choose_card_items{
     --bs-gutter-x:3rem;
     --bs-gutter-y: 3rem; /* Vertical gutter */
     padding-top: 50px;
 }
-section.choose_section .choose_item{
+section#choose_section .choose_item{
     position: relative;
     z-index: 1;
 }
-section.choose_section .choose_card{
+section#choose_section .choose_card{
     padding: 1.875rem;
     box-shadow: 0 5px 45px rgba(23, 23, 58, 0.1);
     position: relative;
@@ -220,10 +232,10 @@ section.choose_section .choose_card:hover::after{
     -ms-transform: rotate(4deg);    /* Internet Explorer 9 */
     transform: rotate(4deg);        /* Modern browsers */
 }
-section.choose_section .choose_card_icon{
+section#choose_section .choose_card_icon{
     width: 75px;
     height: 75px;
-    background-color: var(--transparet-orange);
+    background-color:var(--transparent-color) ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -356,3 +368,69 @@ section.review_section .review_title::after{
     -webkit-border-radius: 50%;
 }
 /* review section  css end form here */
+/* cta section css start form here */
+section#cta_section{
+    position: relative;
+    z-index: 1;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    overflow: hidden;
+}
+section.cta_section .shape_one,
+section.cta_section .shape_two{
+    position: absolute;
+    clip-path: polygon(0 25%, 100% 0, 100% 75%, 0 100%);
+    z-index: -1;
+    background: linear-gradient(to bottom, var(--orange-color), #fff);
+}
+
+section.cta_section .shape_one{
+    width: 450px;
+    height: 180px;
+    top: 0;
+    right: -50px;
+    opacity: 0.1;
+    transform: rotate(-10deg); /* Modern browsers */
+}
+section.cta_section .shape_two{
+    width: 550px;   
+    height: 300px;
+    top: 200px;
+    right: -50px;
+    opacity: 0.15;
+    transform: rotate(-10deg); /* Modern browsers */
+}
+section.cta_section .shape_three{
+    position: absolute;
+    clip-path: polygon(0 25%, 100% 0, 100% 75%, 0 100%);
+    z-index: -1;
+    width: 550px;
+    height: 300px;
+    bottom: 100px;
+    left: -50px;
+    opacity: 0.15;
+    transform: rotate(-10deg);
+    background: linear-gradient(to top, var(--orange-color), #fff);
+}
+section.cta_section .row.cta_card_items{
+    padding-top: 35px;
+    --bs-gutter-y:3rem;
+}
+section.cta_section .row.cta_card_items .cta_card .cta_card_icon{
+    width: 75px;
+    height: 75px;
+    background-color:var(--transparent-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+section.cta_section .row.cta_card_items .cta_card .cta_card_content{
+    margin-top: 1.875rem;
+}
+section.cta_section .row.cta_card_items .cta_card .cta_card_content .cta_card_title{
+    font-size: 1.75rem;
+    font-weight: var(--fw-600);
+}
+/* cta section css end form here */

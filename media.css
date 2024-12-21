@@ -7,12 +7,15 @@
     }
     section#banner_section h2.banner_title,
     h2.hm_category_title,
-    section.choose_section h2.choose_section_title,
-    section.review_section .review_title {
+    section#choose_section h2.choose_section_title,
+    section#review_section .review_title,
+    .section_title
+    {
         font-size: 28px;
         line-height: 39px;
     }
-    section#banner_section p.banner_description {
+    section#banner_section p.banner_description,
+    .section_header p {
         font-size: 16px;
         line-height: 27px;
     }
