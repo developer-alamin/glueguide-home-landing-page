@@ -1,0 +1,48 @@
+/* media screen max width 767px css start form here */
+@media(max-width:767px){
+    section#banner_section {
+        background-image: none;
+        background-color: var(--secondary-bg);
+    }
+    section#banner_section h2.banner_title{
+        font-size: 28px;
+        line-height: 39px;
+    }
+    section#banner_section p.banner_description{
+        font-size: 16px;
+        line-height: 27px;
+    }
+    section.hm_category_section{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    h2.hm_category_title{
+        font-size: 28px;
+        line-height: 39px;
+    }
+}
+/* media screen max width 767px css end form here */
+/* media screen max width 991px css start form here */
+@media(max-width:991px){
+    
+    section#banner_section h2.banner_title{
+        font-size: 36px;
+        line-height: 50px;
+    }
+}
+/* media screen max width 991px css end form here */
+/* media screen max width 1199px css start form here */
+@media(max-width:1199px){
+    section#banner_section h2.banner_title{
+        font-size: 48px;
+        line-height: 67px;
+    }
+}
+/* media screen max width 1199px css end form here */
+/* media screen max width 1399px css start form here */
+@media(max-width:1399px){
+    section.choose_section h2.retalab_section_title{
+        font-size: 3rem;
+    }
+}
+/* media screen max width 1399px css end form here */

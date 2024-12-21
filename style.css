@@ -1,0 +1,237 @@
+
+/* global css start form here */
+:root {
+    --text-color: #17173a ; 
+    --orange-color:#ffa92b;
+    --primary-bg:#ffa92b;
+    --secondary-bg:#9edae5;
+    --gray-color:#505050;
+    --fw-400:400;
+    --fw-500:500;
+    --fw-600:600;
+    --fw-700:700;
+    --fy:"Poppins", sans-serif;
+    --transparet-orange:#ffa92b26;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family:var(--fy);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+
+/* global css start form here */
+/* banner section css start form here */
+section#banner_section {
+    background-image: url('img/banner_bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 6.25rem;
+    padding-bottom: 7.5rem;
+    background-color: #f1f1f1;
+}
+section#banner_section h2.banner_title{
+    font-size: 56px;
+    line-height: 78px;
+    font-weight: var(--fw-700);
+    color: var(--text-color);
+}
+section#banner_section p.banner_description{
+    font-size: 20px;
+    font-weight: var(--fw-500);
+    color: var(--gray-color) ;
+    line-height: 34px;
+}
+input.search-input {
+    height: 70px;
+    padding: 0.625rem 1.25rem;
+}
+input::-webkit-input-placeholder {
+    font-size: 16px;
+    font-weight: var(--fw-500);
+    color: var(--gray-color);
+}
+
+form#banner_form .row {
+    position: relative;
+}
+
+form#banner_form div.submit_col {
+    position: absolute;
+    right: 11px;
+    bottom: 10px;
+}
+button.form-control.submit {
+    height: 46px;
+}
+/* banner section css end form here */
+/* category section css start form here */
+section.hm_category_section{
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    background-color: #f2f2f5;
+    padding-bottom: 100px;
+    padding-top: 100px;
+   
+}
+section.hm_category_section::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    z-index: -1;
+}
+section.hm_category_section .circle_shape{
+    position: absolute;
+    top: 50px;
+    left: -50px;
+    z-index: -2;
+}
+
+section.hm_category_section .square_shape {
+    position: absolute;
+    bottom: -70px;
+    right: -30px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: -2;
+}
+.circle_shape {
+    width: 250px;
+    height: 250px;
+    background-color: var(--primary-bg); /* Modern CSS variable-based color */
+    background-image: linear-gradient(19deg,var(--primary-bg) 0%, var(--secondary-bg) 100%);
+    border-radius: 50%; /* Creates a circular shape */
+}
+
+.square_shape {
+    width: 250px;
+    height: 250px;
+    background-color: var(--primary-bg);
+    background-image: linear-gradient(19deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+h2.hm_category_title{
+    font-size: 36px;
+    line-height: 50px;
+    color: var(--text-color);
+    font-weight: var(--fw-700);
+}
+span.category_not_data{
+    font-size: 16px;
+    line-height: 27px;
+    color: var(--gray-color);
+}
+/* category section css end form here */
+/* retalab section css start form here */
+section#choose_section{
+    position: relative;
+    z-index: 1;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    overflow: hidden;
+}
+.retalab_section_subtitle::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 25px;
+    height: 2px;
+    background-color: var(--primary-bg);
+    margin-top: -1px;
+}
+
+.retalab_section_subtitle::after{
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 0;
+    width: 25px;
+    height: 2px;
+    background-color: var(--primary-bg);
+    margin-top: -1px;
+}
+.retalab_section_subtitle{
+    padding-left: 2.1875rem;
+    padding-right: 2.1875rem;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    font-family: var(--fy);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--orange-color);
+}
+
+section.choose_section h2.retalab_section_title{
+    font-weight: var(--fw-700);
+    color: var(--text-color);
+}
+.choose_item{
+    position: relative;
+    z-index: 1;
+}
+.choose_card{
+    padding: 1.875rem;
+    box-shadow: 0 5px 45px rgba(23, 23, 58, 0.1);
+    position: relative;
+    height: 100%;
+    -webkit-border-radius: 8px;
+    background-color: #fff;
+}
+.choose_card::after{
+    content: ""; /* Required for the pseudo-element to work */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Push the pseudo-element behind the parent content */
+    transform: rotate(-4deg); /* Modern syntax */
+    border-radius: 8px; /* Smooth edges for the pseudo-element */
+    background-color: var(--primary-bg); /* Use your custom CSS variable */
+    transition: all 0.3s; /* Smooth transitions for properties like transform or color */
+}
+.choose_card:hover::after{
+    -webkit-transform: rotate(4deg); /* Safari (older versions) */
+    -ms-transform: rotate(4deg);    /* Internet Explorer 9 */
+    transform: rotate(4deg);        /* Modern browsers */
+}
+.choose_card_icon{
+    width: 75px;
+    height: 75px;
+    background-color: var(--transparet-orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+.choose_card_content{
+    margin-top: 1.875rem;
+}
+.choose_card_content h3.choose_card_title{
+    font-size: 1.75rem;
+    font-weight: var(--fw-600);
+    color: var(--text-color);
+}
+.choose_card_content p.choose_card_description{
+    font-size: 18px;
+    line-height: 31px;
+    font-weight: var(--fw-400);
+}
+/* choose section css end form here */
