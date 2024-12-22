@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./media.css">
+    <link rel="stylesheet" href="./testimonial.css">
 </head>
 <body>
     <div class="root">
@@ -177,11 +178,135 @@
                     </div>
                 </div>
             </section>
+            <section id="testimonial">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-8 col-lg-6">
+                            <div class="section-header text-center">
+                                <div class="section_subtitle">
+                                    Our User Review
+                                </div>
+                                <h2 class="section_title text-white">What Client Says About Us</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-10 col-lg-10">
+                            <div class="testimonial_main_wrapper">
+                                <div class="testimonial-slider">
+                                    <div class="testimonials-container">
+                                      <div class="testimonial active">
+                                        <img src="https://via.placeholder.com/100" alt="John Doe">
+                                        <h3 class="name">John Doe</h3>
+                                        <p class="location">New York, USA</p>
+                                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur turpis ut dictum sagittis.</p>
+                                      </div>
+                                
+                                      <div class="testimonial">
+                                        <img src="https://via.placeholder.com/100" alt="Jane Smith">
+                                        <h3 class="name">Jane Smith</h3>
+                                        <p class="location">London, UK</p>
+                                        <p class="description">Sed tincidunt ipsum at semper malesuada. Proin vel augue vitae libero malesuada vehicula.</p>
+                                      </div>
+                                
+                                      <div class="testimonial">
+                                        <img src="https://via.placeholder.com/100" alt="Mark Johnson">
+                                        <h3 class="name">Mark Johnson</h3>
+                                        <p class="location">Sydney, Australia</p>
+                                        <p class="description">Curabitur ac malesuada ante, et gravida eros. Aliquam euismod sapien at volutpat tempor.</p>
+                                      </div>
+                                    </div>
+                                    
+                                  </div>
+                                   <!-- Slider controls outside the testimonials-container -->
+                                   <div class="slider-controls">
+                                    <button class="prev-btn"><i class="fas fa-long-arrow-alt-left"></i></button>
+                                    <button class="next-btn"><i class="fas fa-long-arrow-alt-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="accordion_section pb-2">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-9">
+                            <div class="accordion">
+                                <div class="accordion-item">
+                                  <div class="accordion-header active">
+                                    <button>
+                                      <span class="heading">Accordion Item 1</span>
+                                      <span class="icon">&#xf107;</span>
+                                    </button>
+                                  </div>
+                                  <div class="accordion-body" style="display: block;">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis efficitur turpis ut dictum sagittis.</p>
+                                  </div>
+                                </div>
+                              
+                                <div class="accordion-item">
+                                  <div class="accordion-header">
+                                    <button>
+                                      <span class="heading">Accordion Item 2</span>
+                                      <span class="icon">&#xf107;</span>
+                                    </button>
+                                  </div>
+                                  <div class="accordion-body">
+                                    <p>Proin vel augue vitae libero malesuada vehicula. Curabitur ac malesuada ante, et gravida eros.</p>
+                                  </div>
+                                </div>
+                              
+                                <div class="accordion-item">
+                                  <div class="accordion-header">
+                                    <button>
+                                      <span class="heading">Accordion Item 3</span>
+                                      <span class="icon">&#xf107;</span>
+                                    </button>
+                                  </div>
+                                  <div class="accordion-body">
+                                    <p>Aliquam euismod sapien at volutpat tempor. Sed tincidunt ipsum at semper malesuada.</p>
+                                  </div>
+                                </div>
+                              </div>
+                              
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
 
-
+     <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Bootstrap Bundle JS (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./testimonial-plugin.js"></script>
+    <script>
+     $(document).ready(function () {
+        // Set the first accordion to be active by default
+        $(".accordion-header:first").addClass("active");
+        $(".accordion-body:first").slideDown(); // Open the first body by default
+
+        $(".accordion-header").click(function () {
+            // If the clicked header is already active, do nothing
+            if (!$(this).hasClass("active")) {
+            // Collapse the currently open accordion body
+            $(".accordion-body").slideUp();
+            $(".accordion-header").removeClass("active");
+
+            // Expand the clicked header's body
+            $(this).next(".accordion-body").slideDown();
+            $(this).addClass("active"); // Add active class to the clicked header
+            } else {
+            // If clicked header is already active, toggle its body visibility
+            $(this).next(".accordion-body").slideToggle();
+            $(this).toggleClass("active");
+            }
+        });
+        });
+
+
+    </script>
 </body>
 </html>

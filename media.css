@@ -21,7 +21,8 @@
     }
     section#banner_section,
     section.hm_category_section,
-    section#choose_section{
+    section#choose_section,
+    section#testimonial{
         padding-top: 80px;
         padding-bottom: 80px;
     }

@@ -1,0 +1,178 @@
+section#testimonial .testimonial_main_wrapper{
+  position: relative;
+  width: 100%;
+}
+section#testimonial .testimonial_main_wrapper .testimonial-slider {
+  width: 780px; /* Set width to 780px */
+  margin: 10px auto 0px auto;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  /* Make the slider responsive */
+  max-width: 100%; /* Allows it to shrink to the width of the screen */
+}
+
+section#testimonial .testimonial_main_wrapper .testimonial-slider .testimonials-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smooth sliding transition */
+}
+
+section#testimonial .testimonial_main_wrapper .testimonial {
+  min-width: 100%; /* Each testimonial takes 100% of the width */
+  text-align: center;
+  padding: 20px;
+  opacity: 0; /* Hide testimonials initially */
+  visibility: hidden; /* Hide testimonials initially */
+  transition: opacity 0.5s ease, visibility 0s 0.5s; /* Smooth fade-in/fade-out effect */
+}
+
+section#testimonial .testimonial_main_wrapper .testimonial.active {
+  opacity: 1; /* Show the active testimonial */
+  visibility: visible; /* Make it visible */
+  transition: opacity 0.5s ease, visibility 0s 0s; /* Instant visibility and smooth fade-in */
+}
+
+section#testimonial .testimonial_main_wrapper .testimonial img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+section#testimonial .testimonial_main_wrapper .testimonial .name {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+section#testimonial .testimonial_main_wrapper .testimonial .location {
+  font-size: 16px;
+  color: #ffa92b;
+  margin: 5px 0;
+
+}
+
+section#testimonial .testimonial_main_wrapper .testimonial .description {
+  color: #fff;
+  margin-top: 1.5625rem;
+  position: relative;
+}
+section#testimonial .testimonial_main_wrapper .testimonial .description::before,.testimonial .description::after{
+  position: absolute;
+  content: "\f10d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  line-height: 1;
+  font-size: 4.125rem;
+  color: rgba(255, 255, 255, 0.1);
+}
+section#testimonial .testimonial_main_wrapper .testimonial .description::before{
+  content: "\f10d";
+  top: -30px;
+  left: 0;
+}
+section#testimonial .testimonial_main_wrapper .testimonial .description::after{
+  content: "\f10e";
+  bottom: -30px;
+  right: 0;
+}
+/* Slider Controls Styling */
+section#testimonial .testimonial_main_wrapper .slider-controls {
+  position: absolute;
+  top: 50%; /* Position vertically at the center of the slider */
+  left: 0;
+  right: 0;
+  transform: translateY(-50%); /* Center vertically */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px; /* Add padding to the left and right */
+}
+
+section#testimonial .testimonial_main_wrapper .slider-controls button {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  padding: 15px 19px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+section#testimonial .testimonial_main_wrapper .slider-controls button:hover {
+  background-color: #007bff;
+}
+
+/* Responsive design for mobile and smaller screens */
+@media (max-width: 768px) {
+  section#testimonial .testimonial_main_wrapper .testimonial-slider {
+    width: 90%; /* Adjust width for smaller screens */
+    margin: 30px auto;
+  }
+
+  section#testimonial .testimonial_main_wrapper .testimonial img {
+    width: 80px;
+    height: 80px; /* Adjust image size on smaller screens */
+  }
+
+  section#testimonial .testimonial_main_wrapper .testimonial .name {
+    font-size: 18px; /* Smaller font size */
+  }
+
+  section#testimonial .testimonial_main_wrapper .testimonial .location {
+    font-size: 12px; /* Smaller font size */
+  }
+
+  section#testimonial .testimonial_main_wrapper .testimonial .description {
+    font-size: 14px; /* Smaller font size */
+  }
+
+  section#testimonial .testimonial_main_wrapper .slider-controls button {
+    padding: 8px 16px; /* Smaller button size */
+  }
+  /* Slider Controls Styling */
+  section#testimonial .testimonial_main_wrapper .slider-controls {
+    position: absolute;
+    top: 100%; /* Position vertically at the center of the slider */
+    left: 0;
+    right: 0;
+    transform: translateY(-50%); /* Center vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px; /* Add padding to the left and right */
+  }
+  section#testimonial .testimonial_main_wrapper .slider-controls button {
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  section#testimonial .testimonial_main_wrapper .testimonial-slider {
+    width: 100%; /* Full width for very small screens */
+    margin: 20px auto;
+  }
+
+  section#testimonial .testimonial_main_wrapper .testimonial img {
+    width: 60px;
+    height: 60px; /* Even smaller image for very small screens */
+  }
+
+  section#testimonial .testimonial_main_wrapper .testimonial .name {
+    font-size: 16px; /* Further decrease font size */
+  }
+
+  section#testimonial .testimonial_main_wrapper .testimonial .location {
+    font-size: 10px; /* Further decrease font size */
+  }
+
+  section#testimonial .testimonial_main_wrapper .testimonial .description {
+    font-size: 12px; /* Further decrease font size */
+  }
+
+  section#testimonial .testimonial_main_wrapper .slider-controls button {
+    padding: 6px 12px; /* Even smaller button size */
+  }
+}

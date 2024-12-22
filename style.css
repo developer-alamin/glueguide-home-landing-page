@@ -29,6 +29,10 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 3rem;
     color: var(--blue-black);
     font-weight: var(--fw-700);
+    line-height: 67px;
+}
+.section_header{
+    margin-bottom: 4.0625rem;
 }
 .section_header p,
 section.cta_section .row div.cta_card div.cta_card_content p.description
@@ -434,3 +438,117 @@ section.cta_section .row.cta_card_items .cta_card .cta_card_content .cta_card_ti
     font-weight: var(--fw-600);
 }
 /* cta section css end form here */
+/* testimonial section css start form here */
+section#testimonial{
+    background-image: url('./img/testimonial.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    overflow: hidden;
+}
+section#testimonial .section_subtitle{
+    padding-left: 2.1875rem;
+    padding-right: 2.1875rem;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: var(--fw-500);
+    color: var(--orange-color);
+}
+section#testimonial .section_subtitle::before{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 25px;
+    height: 2px;
+    background-color: var(--orange-color);
+    margin-top: -1px;
+}
+section#testimonial .section_subtitle::after{
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 0;
+    width: 25px;
+    height: 2px;
+    background-color: var(--orange-color);
+    margin-top: -1px;
+}
+/* testimonial section css end form here */
+/* accordion section css start form here */
+section.accordion_section{
+    background-image: url('./img/accordion.jpg');
+}
+
+
+.accordion {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-header {
+  background-color: #ffffff; /* Default background color */
+  padding: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.accordion-header.active {
+  background-color: #007bff; /* Active background color */
+  color: #ffffff; /* Text color for active state */
+}
+
+.accordion-header button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  color: inherit; /* Inherit color from parent (header) */
+}
+
+.accordion-header button .icon {
+  font-family: "Font Awesome 5 Free"; /* Font Awesome family */
+  font-weight: 900;
+  font-size: 18px;
+  transition: transform 0.3s ease; /* Smooth rotation */
+}
+
+.accordion-header.active button .icon {
+  transform: rotate(180deg); /* Rotate the icon when active */
+}
+
+.accordion-body {
+  display: none;
+  padding: 15px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #333;
+}
+
+.accordion-body p {
+  margin: 0;
+}
+
+
+/* accordion section css end form here */
